@@ -1,20 +1,16 @@
 package domain.Modelos;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductoPersonalizado {
     ProductoBase producto;
-    List<Personalizacion> personalizaciones;
+    Personalizacion personalizacion;
     int precioFinal;
 
-    public ProductoPersonalizado(ProductoBase producto) {
+    public ProductoPersonalizado(ProductoBase producto, Personalizacion personalizacion, int precioFinal) {
         this.producto = producto;
-        this.personalizaciones = new ArrayList<>();
-    }
-
-    public void agregarPersonalizacion(Personalizacion personalizacion){
-        personalizaciones.add(personalizacion);
+        this.personalizacion = personalizacion;
+        this.precioFinal = precioFinal;
     }
 
     public ProductoBase getProducto() {
@@ -25,12 +21,12 @@ public class ProductoPersonalizado {
         this.producto = producto;
     }
 
-    public List<Personalizacion> getPersonalizaciones() {
-        return personalizaciones;
+    public Personalizacion getPersonalizacion() {
+        return personalizacion;
     }
 
-    public void setPersonalizaciones(List<Personalizacion> personalizaciones) {
-        this.personalizaciones = personalizaciones;
+    public void setPersonalizacion(Personalizacion personalizacion) {
+        this.personalizacion = personalizacion;
     }
 
     public int getPrecioFinal() {

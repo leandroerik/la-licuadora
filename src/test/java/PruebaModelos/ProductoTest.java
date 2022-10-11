@@ -41,11 +41,9 @@ public class ProductoTest {
         Personalizacion estampaUSA = new Personalizacion("estampado usa",100,temporada,"USA");
 
 
-        ProductoPersonalizado productoPersonalizado = new ProductoPersonalizado(producto);
+        ProductoPersonalizado productoPersonalizado = new ProductoPersonalizado(producto,estampaUSA,150);
 
-        productoPersonalizado.agregarPersonalizacion(estampaUSA);
-
-        assertTrue(productoPersonalizado.getPersonalizaciones().contains(estampaUSA));
+        assertTrue(productoPersonalizado.getPersonalizacion().equals(estampaUSA));
 
     }
 }
