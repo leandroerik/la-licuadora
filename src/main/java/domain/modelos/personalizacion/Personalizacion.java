@@ -1,4 +1,4 @@
-package domain.Modelos;
+package domain.modelos.personalizacion;
 
 public class Personalizacion {
     String nombre;

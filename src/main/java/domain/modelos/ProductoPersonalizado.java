@@ -1,6 +1,6 @@
-package domain.Modelos;
+package domain.modelos;
 
-import java.util.List;
+import domain.modelos.personalizacion.Personalizacion;
 
 public class ProductoPersonalizado {
     ProductoBase producto;

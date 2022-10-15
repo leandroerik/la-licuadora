@@ -1,4 +1,6 @@
-package domain.Modelos;
+package domain.modelos;
+
+import domain.modelos.personalizacion.PosiblePersonalizacion;
 
 import java.util.ArrayList;
 import java.util.List;
