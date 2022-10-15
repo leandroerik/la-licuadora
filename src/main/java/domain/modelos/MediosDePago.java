@@ -7,4 +7,4 @@ public enum MediosDePago {
     TRANSFERENCIA,
     OTRAS_PLATAFORMAS
 }
-// TODO medios de pago clase? OTRAS PLATAFORMAS SI O NO (pregunta)
+// TODO cambiar a clase

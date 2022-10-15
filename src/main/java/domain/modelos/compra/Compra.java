@@ -36,4 +36,7 @@ public class Compra extends Persistente {
     }
 }
 
-// TODO dudas con compra
+// TODO agregar precio total en la compra
+// TODO carrito en lugar de items
+// TODO agregar datos para el pago
+// que podriamos en los datos para el pago que tiene la compra,ya que depende de el medio de pago,estaria bien que solo guarde un string.

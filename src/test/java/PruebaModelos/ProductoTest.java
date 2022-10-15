@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ProductoTest {
     @Test
     public void testProductoBaseOK(){
+        //TODO:Repensar el constructor de producto base.
         ProductoBase producto = new ProductoBase("Remera","remera con logo de USA",22,50);
 
         AreaPersonalizacion delantero = new AreaPersonalizacion("parte delantera de la ropa");
@@ -40,6 +41,7 @@ public class ProductoTest {
 
         AreaPersonalizacion delantero = new AreaPersonalizacion("parte delantera de la ropa");
         TipoPersonalizacion estampa = new TipoPersonalizacion("una estampa clasica");
+
         PosiblePersonalizacion temporada = new PosiblePersonalizacion(delantero,estampa);
 
         Personalizacion estampaUSA = new Personalizacion("estampado usa",100,temporada,"USA");

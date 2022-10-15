@@ -23,6 +23,3 @@ public class Item extends Persistente {
     @JoinColumn(name = "carritoDeCompra_id", referencedColumnName = "id")
     private CarritoDeCompra carritoDeCompra;
 }
-
-// TODO agregar mas cosas
-// TODO @ManyToOne con publicacion? una publicacion la pueden tener como item muchas personas

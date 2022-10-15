@@ -1,5 +1,6 @@
 package domain.modelos.publicacion;
 
+import domain.modelos.ProductoPersonalizado;
 import domain.modelos.Vendedor;
 import domain.modelos.Persistente;
 import lombok.Getter;
@@ -20,7 +21,8 @@ public class Publicacion extends Persistente {
     @JoinColumn(name = "vendedor_id", referencedColumnName = "id")
     private Vendedor vendedor;
 
-    //private ProductoPersonalizado productoPersonalizado;
+    @Transient
+    private ProductoPersonalizado productoPersonalizado;
 
     @Column(name = "fechaDePublicacion", columnDefinition = "DATE")
     private LocalDate fechaDePublicacion;
@@ -31,8 +33,10 @@ public class Publicacion extends Persistente {
     public Publicacion() {
         this.estados = new ArrayList<>();
     }
+
+    public void agregarEstados(EstadoPublicacion estado) {
+        this.estados.add(estado);
+    }
 }
 
-// TODO agregarEstado? metodo add estado
-// TODO trazabilidad o ultimo estado (pregunta)
 // TODO mapear producto personalizado

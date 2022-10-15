@@ -26,5 +26,5 @@ public class CarritoDeCompra extends Persistente {
 }
 
 // TODO agregarItem? metodo add item
-// TODO bidireccional con item
-// TODO relacionar con compra
+// TODO bidireccional con item PREGUNTARRR
+// TODO relacionar con compra PREGUNTARRR

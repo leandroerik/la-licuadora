@@ -31,6 +31,9 @@ public class Comprador extends Persistente {
     @Column(name = "telefono")
     private Set<String> telefonos;
 
+    @Column(name = "email")
+    private String email;
+
     @OneToOne
     @JoinColumn(name = "carritoDeCompra_id", referencedColumnName = "id")
     private CarritoDeCompra carritoDeCompra;
@@ -40,7 +43,5 @@ public class Comprador extends Persistente {
     }
 }
 
-// TODO emails, fecha de nacimiento (preg)
-// TODO tipodocumento entra (preg)
-// TODO method seleccionar producto, comprar producto
-// TODO medios de pago que posee (preg)
+// TODO method seleccionar producto, comprar producto PREGUNTARRR,(debemos agregar estos metodos,para la utlicacion del carrito de compra y las publicaciones)
+// TODO La relacion correcta para el Comprador y CarritoCompra es ONE TO ONE?

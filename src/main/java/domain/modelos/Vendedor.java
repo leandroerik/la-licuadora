@@ -38,7 +38,7 @@ public class Vendedor extends Persistente {
         this.publicaciones.add(publicacion);
     }
 }
-// TODO direccion vendedor (pregunta)
-// TODO medios de pago enum?, creo que no, qr, pulsera
-// TODO metodo personalizar (pregunta)
+
+// TODO medios de pago enum?, creo que no, qr, pulsera,PREGUNTARRR
+// TODO metodo personalizar PREGUNTARR
 // TODO ABM de publicacion
