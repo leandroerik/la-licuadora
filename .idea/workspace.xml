@@ -4,25 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80aaf238-216b-4951-a909-2d2889b60883" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+
+    <list default="true" id="80aaf238-216b-4951-a909-2d2889b60883" name="Changes" comment="Subo clases relacionadas con compra, carrito, comprador y vendedor">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/CarritoDeCompra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Comprador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/MediosDePago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Persistente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/TipoDocumento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Vendedor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/Compra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/EstadoCompra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/PosibleEstadoCompra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/convertidores/LocalDateAtributoConvertidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/convertidores/LocalTimeAtributoConvertidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/publicacion/EstadoPublicacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/publicacion/PosibleEstadoPublicacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/publicacion/Publicacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/ContextoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Modelos/ProductoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Modelos/ProductoBase.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EsQWXqGqMy68PjVElY7Cg6DzwG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+
+    <ConfirmationsSetting value="1" id="Add" />
+
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,9 +63,42 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+
+
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alyst/Desktop/Curso Java Credicoop/TP final/la-licuadora&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="domain.modelos.compra" />
+      <recent name="domain.modelos" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ContextoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="la-licuadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ContextoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ContextoTest" />
+      </list>
+    </recent_temporary>
+  </component>
+
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,6 +108,28 @@
       <option name="presentableId" value="Default" />
       <updated>1663381848714</updated>
     </task>
+    <task id="LOCAL-00001" summary="probando la branch numero 2">
+      <created>1665195614497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665195614497</updated>
+    </task>
+    <task id="LOCAL-00002" summary="probando la branch numero 2">
+      <created>1665195691714</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665195691714</updated>
+    </task>
+    <task id="LOCAL-00003" summary="puse domain">
+      <created>1665196565346</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665196565346</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -50,10 +137,42 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="probando la branch numero 2" />
+    <MESSAGE value="puse domain" />
+    <MESSAGE value="Subo clases relacionadas con compra, carrito, comprador y vendedor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subo clases relacionadas con compra, carrito, comprador y vendedor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.AnnotationException" package="org.hibernate" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
