@@ -4,20 +4,20 @@ import domain.modelos.personalizacion.Personalizacion;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "producto_personalizado")
 @Getter
 @Setter
 public class ProductoPersonalizado {
-    @Transient
+
+    @ManyToOne
+    @JoinColumn(name = "producto_id",referencedColumnName = "id")
     ProductoBase producto;
 
-    @Transient
+    @ManyToOne
+    @JoinColumn(name = "personalizacion_id",referencedColumnName = "id")
     Personalizacion personalizacion;
 
     @Column(name = "precio_final")
