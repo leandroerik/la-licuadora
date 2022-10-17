@@ -1,18 +1,21 @@
 package domain.modelos.personalizacion;
 
+import domain.modelos.Persistente;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.persistence.Persistence;
+import javax.persistence.Table;
 
-@Entity(name = "area_personalizacion")
+@Entity
+@Table(name = "area_personalizacion")
 @Getter
 @Setter
-public class AreaPersonalizacion extends Persistence {
+public class AreaPersonalizacion extends Persistente {
+
     @Column(name="desc_area")
-    String descripcionArea;
+    private String descripcionArea;
 
     public AreaPersonalizacion(String descripcionArea) {
         this.descripcionArea = descripcionArea;
