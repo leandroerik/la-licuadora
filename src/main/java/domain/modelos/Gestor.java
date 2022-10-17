@@ -1,10 +1,22 @@
 package domain.modelos;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
-
-public class Gestor {
+@Entity
+@Table(name="gestor")
+@Getter
+@Setter
+public class Gestor extends Persistente {
+    @Column(name="nombre")
     String nombre;
+    @Transient
     List<ProductoBase> productos;
 
     public Gestor(String nombre) {
@@ -16,19 +28,4 @@ public class Gestor {
         productos.add(productoBase);
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public List<ProductoBase> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<ProductoBase> productos) {
-        this.productos = productos;
-    }
 }
