@@ -1,10 +1,26 @@
 package domain.modelos;
 
 import domain.modelos.personalizacion.Personalizacion;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+@Entity
+@Table(name = "producto_personalizado")
+@Getter
+@Setter
 public class ProductoPersonalizado {
+    @Transient
     ProductoBase producto;
+
+    @Transient
     Personalizacion personalizacion;
+
+    @Column(name = "precio_final")
     int precioFinal;
 
     public ProductoPersonalizado(ProductoBase producto, Personalizacion personalizacion, int precioFinal) {
@@ -13,27 +29,4 @@ public class ProductoPersonalizado {
         this.precioFinal = precioFinal;
     }
 
-    public ProductoBase getProducto() {
-        return producto;
-    }
-
-    public void setProducto(ProductoBase producto) {
-        this.producto = producto;
-    }
-
-    public Personalizacion getPersonalizacion() {
-        return personalizacion;
-    }
-
-    public void setPersonalizacion(Personalizacion personalizacion) {
-        this.personalizacion = personalizacion;
-    }
-
-    public int getPrecioFinal() {
-        return precioFinal;
-    }
-
-    public void setPrecioFinal(int precioFinal) {
-        this.precioFinal = precioFinal;
-    }
 }
