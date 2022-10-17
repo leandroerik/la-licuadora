@@ -10,15 +10,15 @@ import javax.persistence.*;
 @Table(name = "producto_personalizado")
 @Getter
 @Setter
-public class ProductoPersonalizado {
+public class ProductoPersonalizado extends Persistente{
 
     @ManyToOne
     @JoinColumn(name = "producto_id",referencedColumnName = "id")
-    ProductoBase producto;
+    private ProductoBase producto;
 
     @ManyToOne
     @JoinColumn(name = "personalizacion_id",referencedColumnName = "id")
-    Personalizacion personalizacion;
+    private Personalizacion personalizacion;
 
     @Column(name = "precio_final")
     int precioFinal;
