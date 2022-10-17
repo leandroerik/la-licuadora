@@ -1,16 +1,34 @@
 package domain.modelos;
 
 import domain.modelos.personalizacion.PosiblePersonalizacion;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity(name="producto_base")
+@Getter
+@Setter
 public class ProductoBase {
+    @Column(name = "nombre")
     String nombre;
+
+    @Column(name = "descripcion")
     String descripcion;
+
+    @Transient
     List<PosiblePersonalizacion> personalizacionesPermitidas;
+
+    @Column(name="tiempo_fabricacion")
     int tiempoFabricacion;
+
+    @Column(name = "precio_base")
     int precioBase;
+
 
     public ProductoBase(String nombre, String descripcion, int tiempoFabricacion, int precioBase) {
         this.nombre = nombre;
@@ -27,39 +45,5 @@ public class ProductoBase {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public List<PosiblePersonalizacion> getPersonalizacionesPermitidas() {
-        return personalizacionesPermitidas;
-    }
-
-    public void setPersonalizacionesPermitidas(List<PosiblePersonalizacion> personalizacionesPermitidas) {
-        this.personalizacionesPermitidas = personalizacionesPermitidas;
-    }
-
-    public int getTiempoFabricacion() {
-        return tiempoFabricacion;
-    }
-
-    public void setTiempoFabricacion(int tiempoFabricacion) {
-        this.tiempoFabricacion = tiempoFabricacion;
-    }
-
-    public int getPrecioBase() {
-        return precioBase;
-    }
-
-    public void setPrecioBase(int precioBase) {
-        this.precioBase = precioBase;
-    }
 }
