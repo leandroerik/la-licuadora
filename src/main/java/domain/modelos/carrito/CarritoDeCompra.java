@@ -1,10 +1,8 @@
-package domain.modelos.carritoDeCompra;
+package domain.modelos.carrito;
 
 import domain.modelos.Comprador;
 import domain.modelos.Item;
 import domain.modelos.Persistente;
-import domain.modelos.compra.EstadoCompra;
-import domain.modelos.publicacion.EstadoPublicacion;
 import lombok.Getter;
 import lombok.Setter;
 
