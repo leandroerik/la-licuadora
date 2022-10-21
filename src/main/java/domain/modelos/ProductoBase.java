@@ -7,6 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 @Table(name="producto_base")
 @Getter
@@ -19,33 +20,26 @@ public class ProductoBase extends Persistente{
     @Column(name = "descripcion")
     private String descripcion;
 
-    @Transient
-    List<PosiblePersonalizacion> personalizacionesPermitidas;
+    @OneToMany
+    @JoinColumn(name = "producto_base_id", referencedColumnName = "id")
+    private List<PosiblePersonalizacion> personalizacionesPermitidas;
 
     @Column(name="tiempo_fabricacion")
-    private int tiempoFabricacion;
+    private Integer tiempoFabricacion;
 
     @Column(name = "precio_base")
-    private int precioBase;
+    private Float precioBase;
 
     @ManyToOne
     @JoinColumn(name="gestor_id",referencedColumnName = "id")
     private Gestor gestor;
 
-    public ProductoBase(String nombre, String descripcion, int tiempoFabricacion, int precioBase) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
+    public ProductoBase() {
         this.personalizacionesPermitidas = new ArrayList<>();
-        this.tiempoFabricacion = tiempoFabricacion;
-        this.precioBase = precioBase;
     }
 
     public void agregarPersonalizacion(PosiblePersonalizacion posible){
         personalizacionesPermitidas.add(posible);
     }
-    public String getNombre() {
-        return nombre;
-    }
-
 
 }

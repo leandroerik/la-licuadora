@@ -18,8 +18,7 @@ public class Gestor extends Persistente {
     @OneToMany(mappedBy = "gestor")
     private List<ProductoBase> productos;
 
-    public Gestor(String nombre) {
-        this.nombre = nombre;
+    public Gestor() {
         this.productos = new ArrayList<>();
     }
 

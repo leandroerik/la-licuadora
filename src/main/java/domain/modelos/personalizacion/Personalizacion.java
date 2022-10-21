@@ -4,10 +4,7 @@ import domain.modelos.Persistente;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "personalizacion")
@@ -19,18 +16,13 @@ public class Personalizacion extends Persistente {
     private String nombre;
 
     @Column(name = "precio")
-    private int precio;
+    private Float precio;
 
-    @Transient
-    private PosiblePersonalizacion categoria;
+    @OneToOne
+    @JoinColumn(name = "posible_personalizacion_id",referencedColumnName = "id")
+    private PosiblePersonalizacion posiblePersonalizacion;
 
     @Column(name = "contenido")
     private String contenido;
 
-    public Personalizacion(String nombre, int precio, PosiblePersonalizacion categoria, String contenido) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
-        this.contenido = contenido;
-    }
 }

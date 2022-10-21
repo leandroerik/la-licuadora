@@ -14,11 +14,7 @@ import javax.persistence.Table;
 @Setter
 public class TipoPersonalizacion extends Persistente {
 
-    @Column(name = "desc_tipo")
-    private String descripcionTipo;
-
-    public TipoPersonalizacion(String descripcionTipo) {
-        this.descripcionTipo = descripcionTipo;
-    }
+    @Column(name = "nombre_tipo")
+    private String nombreTipo;
 
 }

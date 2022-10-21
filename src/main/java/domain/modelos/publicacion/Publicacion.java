@@ -21,7 +21,8 @@ public class Publicacion extends Persistente {
     @JoinColumn(name = "vendedor_id", referencedColumnName = "id")
     private Vendedor vendedor;
 
-    @Transient
+    @OneToOne
+    @JoinColumn(name = "producto_personalizado_id", referencedColumnName = "id")
     private ProductoPersonalizado productoPersonalizado;
 
     @Column(name = "fechaDePublicacion", columnDefinition = "DATE")
@@ -38,5 +39,3 @@ public class Publicacion extends Persistente {
         this.estados.add(estado);
     }
 }
-
-// TODO mapear producto personalizado

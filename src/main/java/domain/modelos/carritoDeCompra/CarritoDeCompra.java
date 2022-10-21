@@ -1,5 +1,10 @@
-package domain.modelos;
+package domain.modelos.carritoDeCompra;
 
+import domain.modelos.Comprador;
+import domain.modelos.Item;
+import domain.modelos.Persistente;
+import domain.modelos.compra.EstadoCompra;
+import domain.modelos.publicacion.EstadoPublicacion;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,11 +25,11 @@ public class CarritoDeCompra extends Persistente {
     @OneToMany(mappedBy = "carritoDeCompra")
     private List<Item> items;
 
+    @OneToMany(mappedBy = "carritoDeCompra")
+    private List<EstadoCarrito> estados;
+
     public CarritoDeCompra() {
+        this.estados = new ArrayList<>();
         this.items = new ArrayList<>();
     }
 }
-
-// TODO agregarItem? metodo add item
-// TODO bidireccional con item PREGUNTARRR
-// TODO relacionar con compra PREGUNTARRR

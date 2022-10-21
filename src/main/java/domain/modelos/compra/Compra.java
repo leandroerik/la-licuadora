@@ -1,6 +1,6 @@
 package domain.modelos.compra;
 
-import domain.modelos.Item;
+import domain.modelos.carritoDeCompra.CarritoDeCompra;
 import domain.modelos.Persistente;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,9 +17,9 @@ import java.util.List;
 @Setter
 public class Compra extends Persistente {
 
-    @OneToMany
-    @JoinColumn(name = "compra_id", referencedColumnName = "id")
-    private List<Item> items;
+    @OneToOne
+    @JoinColumn(name = "carrito_de_compra_id", referencedColumnName = "id")
+    private CarritoDeCompra carritoDeCompra;
 
     @Column(name = "fecha", columnDefinition = "DATE")
     private LocalDate fecha;
@@ -31,12 +31,10 @@ public class Compra extends Persistente {
     private List<EstadoCompra> estados;
 
     public Compra() {
-        this.items = new ArrayList<>();
         this.estados = new ArrayList<>();
     }
 }
 
 // TODO agregar precio total en la compra
-// TODO carrito en lugar de items
 // TODO agregar datos para el pago
 // que podriamos en los datos para el pago que tiene la compra,ya que depende de el medio de pago,estaria bien que solo guarde un string.

@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class ProductoPersonalizado extends Persistente{
 
     @ManyToOne
-    @JoinColumn(name = "producto_id",referencedColumnName = "id")
+    @JoinColumn(name = "producto_base_id",referencedColumnName = "id")
     private ProductoBase producto;
 
     @ManyToOne
@@ -21,12 +21,6 @@ public class ProductoPersonalizado extends Persistente{
     private Personalizacion personalizacion;
 
     @Column(name = "precio_final")
-    int precioFinal;
-
-    public ProductoPersonalizado(ProductoBase producto, Personalizacion personalizacion, int precioFinal) {
-        this.producto = producto;
-        this.personalizacion = personalizacion;
-        this.precioFinal = precioFinal;
-    }
+    private Float precioFinal;
 
 }

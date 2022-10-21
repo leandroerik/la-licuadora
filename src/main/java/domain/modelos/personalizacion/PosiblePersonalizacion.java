@@ -1,27 +1,23 @@
 package domain.modelos.personalizacion;
 
-public class PosiblePersonalizacion {
-    AreaPersonalizacion area;
-    TipoPersonalizacion tipo;
+import domain.modelos.Persistente;
+import lombok.Getter;
+import lombok.Setter;
 
-    public PosiblePersonalizacion(AreaPersonalizacion area, TipoPersonalizacion tipo) {
-        this.area = area;
-        this.tipo = tipo;
-    }
+import javax.persistence.*;
 
-    public AreaPersonalizacion getArea() {
-        return area;
-    }
+@Entity
+@Table(name = "posible_personalizacion")
+@Getter
+@Setter
+public class PosiblePersonalizacion extends Persistente {
 
-    public void setArea(AreaPersonalizacion area) {
-        this.area = area;
-    }
+    @ManyToOne
+    @JoinColumn(name = "area_id",referencedColumnName = "id")
+    private AreaPersonalizacion area;
 
-    public TipoPersonalizacion getTipo() {
-        return tipo;
-    }
+    @ManyToOne
+    @JoinColumn(name = "tipo_id",referencedColumnName = "id")
+    private TipoPersonalizacion tipo;
 
-    public void setTipo(TipoPersonalizacion tipo) {
-        this.tipo = tipo;
-    }
 }

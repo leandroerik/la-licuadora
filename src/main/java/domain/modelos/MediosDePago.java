@@ -4,7 +4,5 @@ public enum MediosDePago {
     EFECTIVO,
     CREDITO,
     DEBITO,
-    TRANSFERENCIA,
-    OTRAS_PLATAFORMAS
+    TRANSFERENCIA
 }
-// TODO cambiar a clase

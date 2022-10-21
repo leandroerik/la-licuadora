@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.persistence.Persistence;
 import javax.persistence.Table;
 
 @Entity
@@ -14,11 +13,7 @@ import javax.persistence.Table;
 @Setter
 public class AreaPersonalizacion extends Persistente {
 
-    @Column(name="desc_area")
-    private String descripcionArea;
-
-    public AreaPersonalizacion(String descripcionArea) {
-        this.descripcionArea = descripcionArea;
-    }
+    @Column(name="nombre_area")
+    private String nombreArea;
 
 }

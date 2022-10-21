@@ -1,5 +1,6 @@
 package domain.modelos;
 
+import domain.modelos.carritoDeCompra.CarritoDeCompra;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -42,6 +43,3 @@ public class Comprador extends Persistente {
         this.telefonos = new LinkedHashSet<>();
     }
 }
-
-// TODO method seleccionar producto, comprar producto PREGUNTARRR,(debemos agregar estos metodos,para la utlicacion del carrito de compra y las publicaciones)
-// TODO La relacion correcta para el Comprador y CarritoCompra es ONE TO ONE?
