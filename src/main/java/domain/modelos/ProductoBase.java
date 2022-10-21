@@ -1,65 +1,45 @@
 package domain.modelos;
 
 import domain.modelos.personalizacion.PosiblePersonalizacion;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductoBase {
-    String nombre;
-    String descripcion;
-    List<PosiblePersonalizacion> personalizacionesPermitidas;
-    int tiempoFabricacion;
-    int precioBase;
+@Entity
+@Table(name="producto_base")
+@Getter
+@Setter
+public class ProductoBase extends Persistente{
 
-    public ProductoBase(String nombre, String descripcion, int tiempoFabricacion, int precioBase) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "descripcion")
+    private String descripcion;
+
+    @OneToMany
+    @JoinColumn(name = "producto_base_id", referencedColumnName = "id")
+    private List<PosiblePersonalizacion> personalizacionesPermitidas;
+
+    @Column(name="tiempo_fabricacion")
+    private Integer tiempoFabricacion;
+
+    @Column(name = "precio_base")
+    private Float precioBase;
+
+    @ManyToOne
+    @JoinColumn(name="gestor_id",referencedColumnName = "id")
+    private Gestor gestor;
+
+    public ProductoBase() {
         this.personalizacionesPermitidas = new ArrayList<>();
-        this.tiempoFabricacion = tiempoFabricacion;
-        this.precioBase = precioBase;
     }
 
     public void agregarPersonalizacion(PosiblePersonalizacion posible){
         personalizacionesPermitidas.add(posible);
     }
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public List<PosiblePersonalizacion> getPersonalizacionesPermitidas() {
-        return personalizacionesPermitidas;
-    }
-
-    public void setPersonalizacionesPermitidas(List<PosiblePersonalizacion> personalizacionesPermitidas) {
-        this.personalizacionesPermitidas = personalizacionesPermitidas;
-    }
-
-    public int getTiempoFabricacion() {
-        return tiempoFabricacion;
-    }
-
-    public void setTiempoFabricacion(int tiempoFabricacion) {
-        this.tiempoFabricacion = tiempoFabricacion;
-    }
-
-    public int getPrecioBase() {
-        return precioBase;
-    }
-
-    public void setPrecioBase(int precioBase) {
-        this.precioBase = precioBase;
-    }
 }

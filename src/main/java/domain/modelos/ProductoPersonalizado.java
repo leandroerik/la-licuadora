@@ -1,39 +1,26 @@
 package domain.modelos;
 
 import domain.modelos.personalizacion.Personalizacion;
+import lombok.Getter;
+import lombok.Setter;
 
-public class ProductoPersonalizado {
-    ProductoBase producto;
-    Personalizacion personalizacion;
-    int precioFinal;
+import javax.persistence.*;
 
-    public ProductoPersonalizado(ProductoBase producto, Personalizacion personalizacion, int precioFinal) {
-        this.producto = producto;
-        this.personalizacion = personalizacion;
-        this.precioFinal = precioFinal;
-    }
+@Entity
+@Table(name = "producto_personalizado")
+@Getter
+@Setter
+public class ProductoPersonalizado extends Persistente{
 
-    public ProductoBase getProducto() {
-        return producto;
-    }
+    @ManyToOne
+    @JoinColumn(name = "producto_base_id",referencedColumnName = "id")
+    private ProductoBase producto;
 
-    public void setProducto(ProductoBase producto) {
-        this.producto = producto;
-    }
+    @ManyToOne
+    @JoinColumn(name = "personalizacion_id",referencedColumnName = "id")
+    private Personalizacion personalizacion;
 
-    public Personalizacion getPersonalizacion() {
-        return personalizacion;
-    }
+    @Column(name = "precio_final")
+    private Float precioFinal;
 
-    public void setPersonalizacion(Personalizacion personalizacion) {
-        this.personalizacion = personalizacion;
-    }
-
-    public int getPrecioFinal() {
-        return precioFinal;
-    }
-
-    public void setPrecioFinal(int precioFinal) {
-        this.precioFinal = precioFinal;
-    }
 }

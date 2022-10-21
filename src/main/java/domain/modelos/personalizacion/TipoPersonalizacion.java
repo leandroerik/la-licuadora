@@ -1,17 +1,20 @@
 package domain.modelos.personalizacion;
 
-public class TipoPersonalizacion {
-    String descripcionTipo;
+import domain.modelos.Persistente;
+import lombok.Getter;
+import lombok.Setter;
 
-    public TipoPersonalizacion(String descripcionTipo) {
-        this.descripcionTipo = descripcionTipo;
-    }
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-    public String getDescripcionTipo() {
-        return descripcionTipo;
-    }
+@Entity
+@Table(name = "tipo_personalizacion")
+@Getter
+@Setter
+public class TipoPersonalizacion extends Persistente {
 
-    public void setDescripcionTipo(String descripcionTipo) {
-        this.descripcionTipo = descripcionTipo;
-    }
+    @Column(name = "nombre_tipo")
+    private String nombreTipo;
+
 }

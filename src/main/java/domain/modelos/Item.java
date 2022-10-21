@@ -1,5 +1,6 @@
 package domain.modelos;
 
+import domain.modelos.carritoDeCompra.CarritoDeCompra;
 import domain.modelos.publicacion.Publicacion;
 import lombok.Getter;
 import lombok.Setter;

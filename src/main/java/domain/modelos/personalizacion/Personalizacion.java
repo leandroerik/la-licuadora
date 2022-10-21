@@ -1,47 +1,28 @@
 package domain.modelos.personalizacion;
 
-public class Personalizacion {
-    String nombre;
-    int precio;
-    PosiblePersonalizacion categoria;
-    String contenido;
+import domain.modelos.Persistente;
+import lombok.Getter;
+import lombok.Setter;
 
-    public Personalizacion(String nombre, int precio, PosiblePersonalizacion categoria, String contenido) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
-        this.contenido = contenido;
-    }
+import javax.persistence.*;
 
-    public String getNombre() {
-        return nombre;
-    }
+@Entity
+@Table(name = "personalizacion")
+@Getter
+@Setter
+public class Personalizacion extends Persistente {
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    @Column(name = "nombre")
+    private String nombre;
 
-    public int getPrecio() {
-        return precio;
-    }
+    @Column(name = "precio")
+    private Float precio;
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
+    @OneToOne
+    @JoinColumn(name = "posible_personalizacion_id",referencedColumnName = "id")
+    private PosiblePersonalizacion posiblePersonalizacion;
 
-    public PosiblePersonalizacion getCategoria() {
-        return categoria;
-    }
+    @Column(name = "contenido")
+    private String contenido;
 
-    public void setCategoria(PosiblePersonalizacion categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getContenido() {
-        return contenido;
-    }
-
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
-    }
 }

@@ -1,17 +1,19 @@
 package domain.modelos.personalizacion;
 
-public class AreaPersonalizacion {
-    String descripcionArea;
+import domain.modelos.Persistente;
+import lombok.Getter;
+import lombok.Setter;
 
-    public AreaPersonalizacion(String descripcionArea) {
-        this.descripcionArea = descripcionArea;
-    }
+import javax.persistence.*;
+import javax.persistence.Table;
 
-    public String getDescripcionArea() {
-        return descripcionArea;
-    }
+@Entity
+@Table(name = "area_personalizacion")
+@Getter
+@Setter
+public class AreaPersonalizacion extends Persistente {
 
-    public void setDescripcionArea(String descripcionArea) {
-        this.descripcionArea = descripcionArea;
-    }
+    @Column(name="nombre_area")
+    private String nombreArea;
+
 }

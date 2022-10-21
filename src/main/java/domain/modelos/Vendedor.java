@@ -1,5 +1,6 @@
 package domain.modelos;
 
+import domain.modelos.personalizacion.Personalizacion;
 import domain.modelos.publicacion.Publicacion;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,8 +38,5 @@ public class Vendedor extends Persistente {
     public void agregarPublicacion(Publicacion publicacion) {
         this.publicaciones.add(publicacion);
     }
+    
 }
-
-// TODO medios de pago enum?, creo que no, qr, pulsera,PREGUNTARRR
-// TODO metodo personalizar PREGUNTARR
-// TODO ABM de publicacion

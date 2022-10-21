@@ -1,14 +1,24 @@
 package domain.modelos;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+@Entity
+@Table(name="gestor")
+@Getter
+@Setter
+public class Gestor extends Persistente {
 
-public class Gestor {
-    String nombre;
-    List<ProductoBase> productos;
+    @Column(name="nombre")
+    private String nombre;
 
-    public Gestor(String nombre) {
-        this.nombre = nombre;
+    @OneToMany(mappedBy = "gestor")
+    private List<ProductoBase> productos;
+
+    public Gestor() {
         this.productos = new ArrayList<>();
     }
 
@@ -16,19 +26,4 @@ public class Gestor {
         productos.add(productoBase);
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public List<ProductoBase> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<ProductoBase> productos) {
-        this.productos = productos;
-    }
 }
