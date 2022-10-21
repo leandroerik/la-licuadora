@@ -5,5 +5,3 @@ public enum PosibleEstadoPublicacion {
     PAUSADA,
     CANCELADA
 }
-
-// TODO enum (pregunta)
