@@ -2,10 +2,7 @@ package app;
 
 import domain.modelos.Gestor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,10 +14,10 @@ public class GestorController {
     @Autowired
     RepoGestor repo;
     /*esto es la query string*/
-    @GetMapping("/")
-    public List<Gestor> gestores(){
+    @GetMapping(path = {"/",""})
+    public List<Gestor> gestores(@RequestParam(value = "page",required = false,defaultValue = "0") Integer page){
 
-        return repo.page(1,2);
+        return repo.page(page,2);
         // lo que hace el all() , es paginarlo
     }
 
