@@ -18,6 +18,9 @@ public class Gestor extends Persistente {
     @OneToMany(mappedBy = "gestor")
     private List<ProductoBase> productos;
 
+    //En hibernate debe contener un contructor vacio...
+    public Gestor(){}
+
     public Gestor(String nombre) {
         this.nombre = nombre;
         this.productos = new ArrayList<>();

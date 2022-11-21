@@ -28,4 +28,11 @@ public class GestorController {
     public Gestor obtenerGestor(@PathVariable("nombreGestor") String nombreGestor ){
         return repo.porNombre(nombreGestor);
     }
+
+    //Dar de ALTA a un gestor
+    @PostMapping("/")
+    public String alta(@RequestBody Gestor gestor){
+        repo.save(gestor);
+        return "ok";
+    }
 }
