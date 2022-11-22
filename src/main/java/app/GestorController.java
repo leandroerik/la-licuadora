@@ -4,8 +4,10 @@ import domain.modelos.Gestor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,8 +33,13 @@ public class GestorController {
 
     //Dar de ALTA a un gestor
     @PostMapping("/")
-    public String alta(@RequestBody Gestor gestor){
-        repo.save(gestor);
-        return "ok";
+    public String alta(@RequestBody @Valid Gestor gestor, BindingResult binding){
+        binding.hasErrors();
+        if (binding.hasErrors()) {
+            return "not ok";
+        }else {
+            repo.save(gestor);
+            return "ok";
+        }
     }
 }
