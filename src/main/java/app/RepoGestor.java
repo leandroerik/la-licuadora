@@ -10,11 +10,13 @@ import java.util.List;
 @Repository
 public interface RepoGestor {
 
-    public void save(Gestor algo);
+    public void save(Gestor algo) throws GestorRepetidoException;
 
     public List<Gestor> all();
 
     public Page<Gestor> page(Pageable page);
 
     Gestor porNombre(String nombreGestor);
+
+    public Boolean existeGestor(String nombreGestor);
 }

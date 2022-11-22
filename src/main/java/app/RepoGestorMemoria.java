@@ -19,7 +19,11 @@ public class RepoGestorMemoria implements RepoGestor {
     }
 
     @Override
-    public void save(Gestor gestor){
+    public void save(Gestor gestor) throws GestorRepetidoException {
+
+        if (existeGestor(gestor.getNombre())) {
+            throw new GestorRepetidoException("Materia Repetida "+gestor.getNombre());
+        }
         gestores.add(gestor);
     }
 
@@ -38,4 +42,10 @@ public class RepoGestorMemoria implements RepoGestor {
     @Override
     public Gestor porNombre(String nombreGestor){
         return gestores.stream().filter(x -> x.getNombre().equals(nombreGestor)).findFirst().get();    }
+
+    @Override
+    public Boolean existeGestor(String nombreGestor){
+        long count = gestores.stream().filter(x -> x.getNombre().equals(nombreGestor)).count();
+        return count > 0;
+    }
 }

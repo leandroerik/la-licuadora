@@ -33,7 +33,7 @@ public class GestorController {
 
     //Dar de ALTA a un gestor
     @PostMapping("/")
-    public String alta(@RequestBody @Valid Gestor gestor, BindingResult binding){
+    public String alta(@RequestBody @Valid Gestor gestor, BindingResult binding) throws GestorRepetidoException {
         binding.hasErrors();
         if (binding.hasErrors()) {
             return "not ok";
