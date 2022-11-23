@@ -22,7 +22,7 @@ public class RepoGestorMemoria implements RepoGestor {
     public void save(Gestor gestor) throws GestorRepetidoException {
 
         if (existeGestor(gestor.getNombre())) {
-            throw new GestorRepetidoException("Materia Repetida "+gestor.getNombre());
+            throw new GestorRepetidoException("Materia Repetida " + gestor.getNombre());
         }
         gestores.add(gestor);
     }
