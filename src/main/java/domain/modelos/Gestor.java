@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
@@ -12,13 +13,19 @@ import java.util.List;
 @Setter
 public class Gestor extends Persistente {
 
+
     @Column(name="nombre")
+    @NotBlank
     private String nombre;
 
     @OneToMany(mappedBy = "gestor")
     private List<ProductoBase> productos;
 
-    public Gestor() {
+    //En hibernate debe contener un contructor vacio...
+    public Gestor(){}
+
+    public Gestor(String nombre) {
+        this.nombre = nombre;
         this.productos = new ArrayList<>();
     }
 
