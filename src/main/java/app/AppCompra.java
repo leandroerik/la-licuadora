@@ -13,16 +13,10 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 @SpringBootApplication
 @EntityScan("domain.modelos")
 public class AppCompra {
-
+    //Autowired trae cosas que no estan en el bean.
     @Autowired
     RepositoryRestConfiguration config;
 
-/*TODO:Con el autowired le digo que si o si use repoGestor(lo busca dentro del paquete en el cual esta parado! 1:54 VIDEO 13)*/
-    /*@Autowired
-    private RepoGestorJPA repo;
-    @Autowired
-    private RepoProductoBaseJPA repoProd;
-*/
     public static void main(String[] args) {
         SpringApplication.run(AppCompra.class, args);
     }

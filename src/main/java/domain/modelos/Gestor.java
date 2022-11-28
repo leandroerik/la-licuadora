@@ -21,6 +21,9 @@ public class Gestor extends Persistente {
     @OneToMany(mappedBy = "gestor",cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     private List<ProductoBase> productos;
 
+    private boolean estaActivo;
+
+
     //En hibernate debe contener un contructor vacio...
     public Gestor(){}
 
