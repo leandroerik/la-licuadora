@@ -20,7 +20,7 @@ public class Gestor extends Persistente {
 
     @OneToMany(mappedBy = "gestor",cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     private List<ProductoBase> productos;
-
+    @Column
     private boolean estaActivo;
 
 
@@ -29,6 +29,7 @@ public class Gestor extends Persistente {
 
     public Gestor(String nombre) {
         this.nombre = nombre;
+        this.estaActivo = true;
         this.productos = new ArrayList<>();
     }
 
