@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-@RepositoryRestResource(path = "gestores")
+//Con excerpProjection ,defino  que proyeccion va a usar.puedehaber multiples proyecciones.
+@RepositoryRestResource(path = "gestores",excerptProjection = DTOGestor.class)
 public interface RepoGestorJPA extends JpaRepository<Gestor,Integer> {
     @Override
     @RestResource(exported = false)
