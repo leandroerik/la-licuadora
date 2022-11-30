@@ -1,4 +1,4 @@
-package app;
+package domain.DTOs;
 
 import domain.modelos.Gestor;
 import org.springframework.beans.factory.annotation.Value;
