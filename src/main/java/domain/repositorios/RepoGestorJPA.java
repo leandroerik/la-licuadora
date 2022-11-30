@@ -1,5 +1,6 @@
 package domain.repositorios;
 
+import domain.DTOs.DTOGestor;
 import domain.modelos.Gestor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -8,7 +9,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 //Con excerpProjection ,defino  que proyeccion va a usar.puedehaber multiples proyecciones.
-@RepositoryRestResource(path = "gestores")
+@RepositoryRestResource(path = "gestores",excerptProjection = DTOGestor.class)
 public interface RepoGestorJPA extends JpaRepository<Gestor,Integer> {
 
 

@@ -29,9 +29,9 @@ public class GestorControllerComplement {
             Gestor gestor = gestorOpcional.get();
             if (gestor.isEstaActivo()){
                 gestor.setEstaActivo(false);
-                return ResponseEntity.ok().body(" Gestor Eliminado.");
+                return ResponseEntity.ok().body(" Gestor "+gestor.getNombre()+" Eliminado.");
             }else{
-                return ResponseEntity.ok().body(" Gestor ya fue Eliminado.");
+                return ResponseEntity.ok().body(" Gestor "+gestor.getNombre()+" ya fue Eliminado.");
             }
         }
             return ResponseEntity.notFound().build();
@@ -54,5 +54,5 @@ public class GestorControllerComplement {
 
         return ResponseEntity.ok().build();
     }
-
+    //TODO:Implementar actualizar productos de un gestor
 }
