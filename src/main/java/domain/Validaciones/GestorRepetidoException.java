@@ -1,4 +1,4 @@
-package app;
+package domain.Validaciones;
 
 import javax.validation.constraints.NotBlank;
 
