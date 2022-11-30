@@ -1,4 +1,4 @@
-package app;
+package domain.repositorios;
 
 import domain.modelos.Gestor;
 import org.springframework.data.domain.Page;
@@ -10,9 +10,12 @@ import org.springframework.data.rest.core.annotation.RestResource;
 //Con excerpProjection ,defino  que proyeccion va a usar.puedehaber multiples proyecciones.
 @RepositoryRestResource(path = "gestores")
 public interface RepoGestorJPA extends JpaRepository<Gestor,Integer> {
+
+
     @Override
-    @RestResource(exported = false)
+    @RestResource(exported = false)//Con esto descativo la accion de eliminar
     void deleteById(Integer id);
+
     @Override
     @RestResource(exported = false)
     void delete(Gestor gestor);

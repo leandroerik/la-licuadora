@@ -4,7 +4,6 @@ import domain.modelos.personalizacion.PosiblePersonalizacion;
 import lombok.Getter;
 import lombok.Setter;
 import net.minidev.json.annotate.JsonIgnore;
-import org.springframework.transaction.event.TransactionalEventListener;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -23,9 +22,9 @@ public class ProductoBase extends Persistente{
     private String descripcion;
 
     @Transient
-    @JsonIgnore
     @OneToMany
     @JoinColumn(name = "producto_base_id", referencedColumnName = "id")
+    @JsonIgnore
     private List<PosiblePersonalizacion> personalizacionesPermitidas;
 
     @Transient
@@ -35,6 +34,8 @@ public class ProductoBase extends Persistente{
     @Transient
     @Column(name = "precio_base")
     private Float precioBase;
+
+
 
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     @JoinColumn(name="gestor_id",referencedColumnName = "id")

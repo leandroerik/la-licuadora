@@ -1,6 +1,5 @@
 package domain.modelos;
 
-import domain.modelos.personalizacion.Personalizacion;
 import domain.modelos.publicacion.Publicacion;
 import lombok.Getter;
 import lombok.Setter;

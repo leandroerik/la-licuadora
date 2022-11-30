@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="80aaf238-216b-4951-a909-2d2889b60883" name="Changes" comment="Subo clases relacionadas con compra, carrito, comprador y vendedor">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/CarritoDeCompra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Comprador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/MediosDePago.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Persistente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/TipoDocumento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Vendedor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/EstadoCompra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/PosibleEstadoCompra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/convertidores/LocalDateAtributoConvertidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/convertidores/LocalTimeAtributoConvertidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/publicacion/EstadoPublicacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/publicacion/PosibleEstadoPublicacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/publicacion/Publicacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/ContextoTest.java" afterDir="false" />
+    <list default="true" id="80aaf238-216b-4951-a909-2d2889b60883" name="Changes" comment="refactor de codigo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/controladores/GestorControllerComplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/AppCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/AppCompra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/RepoGestorJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/repositorios/RepoGestorJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/RepoProductoBaseJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/repositorios/RepoProductoBaseJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/modelos/Gestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Gestor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/modelos/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/modelos/Persistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Persistente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/modelos/ProductoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/ProductoBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/modelos/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/modelos/compra/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PruebaModelos/ProductoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaModelos/ProductoTest.java" afterDir="false" />
     </list>
+    <list id="82b1f225-bc48-4cbb-8a27-a4b90389f00f" name="Changes by alyst" comment="agregamos clases que faltaban" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,8 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,14 +41,38 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="impl_spring_con_hibernate" />
+                    <option name="lastUsedInstant" value="1669340992" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1669340937" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EsQWXqGqMy68PjVElY7Cg6DzwG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-
     <ConfirmationsSetting value="1" id="Add" />
-
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,20 +81,48 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-
-
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alyst/Desktop/Curso Java Credicoop/TP final/la-licuadora&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UTN/4to año/Capacitacion JAVA/Ejemplo clase/Proyecto-Credicoop-main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="app" />
       <recent name="domain.modelos.compra" />
       <recent name="domain.modelos" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AppCompra">
+    <configuration name="AppCompra" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="domain.AppCompra" />
+      <module name="la-licuadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app.domain.AppCompra" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.domain.AppCompra" />
+      <module name="la-licuadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContextoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="la-licuadora" />
       <extension name="coverage">
@@ -92,13 +138,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ContextoTest.contextUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="la-licuadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ContextoTest" />
+      <option name="METHOD_NAME" value="contextUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.app.domain.AppCompra" />
+      <item itemvalue="Application.AppCompra" />
+      <item itemvalue="JUnit.ContextoTest.contextUp" />
+      <item itemvalue="JUnit.ContextoTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppCompra" />
+        <item itemvalue="Application.app.domain.AppCompra" />
         <item itemvalue="JUnit.ContextoTest" />
+        <item itemvalue="JUnit.ContextoTest.contextUp" />
       </list>
     </recent_temporary>
   </component>
-
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -129,7 +199,84 @@
       <option name="project" value="LOCAL" />
       <updated>1665196565346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="agregando configuracion en el pom del jpa">
+      <created>1669388913348</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669388913348</updated>
+    </task>
+    <task id="LOCAL-00005" summary="implemento persistencia con jpa en el gestor.">
+      <created>1669388968358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669388968358</updated>
+    </task>
+    <task id="LOCAL-00006" summary="presistencia de productos base que pertenecen aun gestor">
+      <created>1669478786517</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669478786517</updated>
+    </task>
+    <task id="LOCAL-00007" summary="iumplemento proyeccion de un gestor y agrego dto.">
+      <created>1669604968636</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669604968636</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implemento baja logica de Gestor">
+      <created>1669639780316</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669639780316</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implemento baja logica de Gestor">
+      <created>1669642987955</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669642987955</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Agrego propiedad de version de dialiecto de sql ,por error de statement al correr app">
+      <created>1669817099708</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669817099708</updated>
+    </task>
+    <task id="LOCAL-00011" summary="cambio a create en la base de datos ,para evitar repeticiones de datos en la bd">
+      <created>1669817149405</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669817149405</updated>
+    </task>
+    <task id="LOCAL-00012" summary="agrego dto para proyeccion de gestor">
+      <created>1669818232118</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818232118</updated>
+    </task>
+    <task id="LOCAL-00013" summary="elimino clases inecesarias">
+      <created>1669818256565</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818256565</updated>
+    </task>
+    <task id="LOCAL-00014" summary="elimino clases inecesarias">
+      <created>1669818336341</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669818336341</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,7 +290,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="impl_spring_con_hibernate" />
                       </list>
                     </value>
                   </entry>
@@ -159,7 +306,17 @@
     <MESSAGE value="probando la branch numero 2" />
     <MESSAGE value="puse domain" />
     <MESSAGE value="Subo clases relacionadas con compra, carrito, comprador y vendedor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Subo clases relacionadas con compra, carrito, comprador y vendedor" />
+    <MESSAGE value="agregando configuracion en el pom del jpa" />
+    <MESSAGE value="implemento persistencia con jpa en el gestor." />
+    <MESSAGE value="presistencia de productos base que pertenecen aun gestor" />
+    <MESSAGE value="iumplemento proyeccion de un gestor y agrego dto." />
+    <MESSAGE value="Implemento baja logica de Gestor" />
+    <MESSAGE value="Agrego propiedad de version de dialiecto de sql ,por error de statement al correr app" />
+    <MESSAGE value="cambio a create en la base de datos ,para evitar repeticiones de datos en la bd" />
+    <MESSAGE value="agrego dto para proyeccion de gestor" />
+    <MESSAGE value="elimino clases inecesarias" />
+    <MESSAGE value="refactor de codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor de codigo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

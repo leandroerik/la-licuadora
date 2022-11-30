@@ -1,4 +1,4 @@
-package app;
+package domain.repositorios;
 
 import domain.modelos.ProductoBase;
 import org.springframework.data.jpa.repository.JpaRepository;
