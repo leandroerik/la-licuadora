@@ -1,19 +1,17 @@
 package domain.repositorios;
 
 import domain.modelos.Gestor;
-import domain.modelos.ProductoBase;
+import domain.modelos.personalizacion.PosiblePersonalizacion;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-@RepositoryRestResource(path = "productos")
-public interface RepoProductoBaseJPA extends JpaRepository<ProductoBase,Integer> {
+public interface PosiblePersonalizacionJPA extends JpaRepository<PosiblePersonalizacion,Integer> {
     @Override
     @RestResource(exported = false)
     void deleteById(Integer id);
 
     @Override
     @RestResource(exported = false)
-    void delete(ProductoBase producto);
+    void delete(PosiblePersonalizacion posiblePersonalizacion);
 
 }
